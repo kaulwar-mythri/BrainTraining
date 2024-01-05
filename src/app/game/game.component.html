@@ -1,0 +1,31 @@
+<div>
+  <div [ngClass]="{'six-cards':numCards===6, 'twelve-cards': numCards===12}" *ngIf="!showPlayAgainButton">
+    <div *ngFor="let card of cards" class="card-container" (click)="flipCard(card)">
+      <div *ngIf="card.flipped" class="card flipped" [ngClass]="{'disappear': card.matched}">
+        <img [src]="card.image" alt="Card Image">
+      </div>
+      <div *ngIf="!card.flipped" class="card"></div>
+    </div>
+  </div>
+
+  <button *ngIf="showPlayAgainButton" (click)="playAgain()" class="btn">
+    Play Again
+  </button>
+
+
+
+  <div class="bottom-bar" *ngIf="!showPlayAgainButton">
+    <div class="inner">
+      <div>{{moves}}</div>
+      <div>Moves</div>
+    </div>
+    <div class="inner">
+      <div>{{misses}}</div>
+      <div>Misses</div>
+    </div>
+    <div class="inner">
+      <div>{{roundsPlayed}}</div>
+      <div>Rounds</div>
+    </div>
+  </div>
+</div>

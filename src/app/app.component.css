@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #5f9ea0, #4682b4); /* Gradient background in cadetblue */
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  padding: 15px;
+  margin: 10px 0;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(to right, #5f9ea0, #4682b4); 
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option:hover {
+  background: linear-gradient(to right, #4682b4, #5f9ea0); 
+}
+
+.active {
+  background: linear-gradient(to right, #5f9ea0, #4682b4);
+}
